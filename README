@@ -88,15 +88,13 @@ Step 2 : Add following routes to your applications routes.rb
 
   ruby script/generate launching_soon_routes
 
-Step 3 :
+Step 3 : Generate migration to add news_letter_subscribers table
 
-Generate migration to add news_letter_subscribers table
+  ruby script/generate migration create_news_letter_subscribers email:string
 
-ruby script/generate migration create_news_letter_subscribers email:string
+  OR, alternatively run the following command
 
-OR, alternatively run the following command
-
-rake db:migrate:launching_soon
+  rake db:migrate:launching_soon
 
 === Issue Tracker
 

@@ -3,12 +3,13 @@ h1. LaunchingSoon
 Launching soon is a plugin that helps rails projects to manage a dedicated launching soon page before the actual launch date. The plugin also collects email from potential customers.
 
 Options available to store subscriber's email addresses are:
-<pre>
-  1. CSV file (public/data.csv).
-  2. Campaign Monitor ("www.campaignmonitor.com":http://www.campaignmonitor.com).
-  3. Mail Chimp ("www.mailchimp.com":http://www.mailchimp.com).
-  4. Databases.
-</pre>
+
+  # CSV file (public/data.csv).
+  # Campaign Monitor ("www.campaignmonitor.com":http://www.campaignmonitor.com).
+  # Mail Chimp ("www.mailchimp.com":http://www.mailchimp.com).
+  # Databases.
+
+
 h2. Pre-requisites
 
 You need an account (API Key and List ID) with:
@@ -44,11 +45,11 @@ h2. Configuration
 Configuration is done via @RAILS_ROOT/config/launching_soon.yml@.
 
 The options that you must specify are:
-<pre>
-  1. css_file_name
-  2. html_file_name
-  3. option_to_store_email (default: csv)
-  4. campaign_monitor_api_key and campaign_monitor_list_id
+
+  # css_file_name
+  # html_file_name
+  # option_to_store_email (default: csv)
+  # campaign_monitor_api_key and campaign_monitor_list_id
      OR
      mail_chimp_api_key and mail_chimp_list_id
      OR
@@ -88,16 +89,11 @@ OR, alternatively run the following command
 ruby script/generate launching_soon_routes
 </code></pre>
 
-Step 3 :
+Step 3 : Generate migration to add news_letter_subscribers table
 <pre><code>
-Generate migration to add news_letter_subscribers table
-
 ruby script/generate migration create_news_letter_subscribers email:string
-
 OR, alternatively run the following command
-
 rake db:migrate:launching_soon
-
 </code></pre>
 
 h2. Issue Tracker
