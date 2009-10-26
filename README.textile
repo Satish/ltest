@@ -92,7 +92,9 @@ ruby script/generate launching_soon_routes
 Step 3 : Generate migration to add news_letter_subscribers table
 <pre><code>
 ruby script/generate migration create_news_letter_subscribers email:string
+
 OR, alternatively run the following command
+
 rake db:migrate:launching_soon
 </code></pre>
 
