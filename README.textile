@@ -72,7 +72,7 @@ h2. Usage
 Step 1 : Include the LaunchingSoon in ApplicationController:
 <pre><code>
 class ApplicationController < ActionController::Base
-  include LaunchingSoon
+  include LaunchingSoon # if Rails.env.development?
   ...
 end
 </code></pre>
